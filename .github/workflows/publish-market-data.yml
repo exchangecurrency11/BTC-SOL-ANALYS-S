@@ -3,6 +3,14 @@ name: Publish BTC SOL Market Data
 
 on:
   workflow_dispatch:
+  schedule:
+    # Data refresh at :05 and :20 UTC every hour (TSI :05 and :20)
+    # The 1H, 4H, and daily (1D) closed candles are all included.
+    - cron: '5,20 * * * *'
+
+concurrency:
+  group: btc-sol-market-data-publish
+  cancel-in-progress: false
 
 permissions:
   contents: write
