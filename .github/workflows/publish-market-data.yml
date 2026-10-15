@@ -1,0 +1,61 @@
+
+name: Publish BTC SOL Market Data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Download market data
+        run: |
+          curl --fail --location --silent --show-error \
+            --retry 2 --max-time 90 \
+            "https://btc-sol-futures-test.exchange-currency-1111.workers.dev/" \
+            -o market_data.json
+
+      - name: Validate data
+        run: |
+          python3 - <<'PY'
+          import json
+
+          with open("market_data.json") as f:
+              data = json.load(f)
+
+          assert data.get("ok") is True
+          results = data.get("results", [])
+
+          assert len(results) == 6
+          assert all(
+              r.get("status") == "READY"
+              for r in results
+          )
+
+          for r in results:
+              assert "closeTimeUTC" in r
+              assert "candle" in r
+              assert "indicators" in r
+
+          print("SUCCESS: 6 data groups verified")
+          PY
+
+      - name: Commit market data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add market_data.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update BTC SOL market data"
+            git push
+          fi
