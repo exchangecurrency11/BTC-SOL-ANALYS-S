@@ -1,0 +1,74 @@
+name: Test Live BTC SOL History and Structure
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/test-live-history.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Test live history and market structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://btc-sol-futures-test.exchange-currency-1111.workers.dev"
+          for interval in 1hour 4hour daily; do
+            echo "### Checking interval: $interval"
+            curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 50 \
+              "$BASE/history?interval=$interval" -o "/tmp/history-$interval.json"
+            python3 - "$interval" <<'PY'
+          import json
+          import sys
+          import time
+          from datetime import datetime, timezone
+          from market_structure import analyze, SECONDS
+          interval = sys.argv[1]
+          with open(f"/tmp/history-{interval}.json", encoding="utf-8") as f:
+              payload = json.load(f)
+          assert isinstance(payload, list) and len(payload) == 2, "Wrong history response shape"
+          assert {p.get("symbol") for p in payload} == {"BTCUSDT_PERP.A", "SOLUSDT_PERP.A"}
+          expected_close = int(time.time()) // SECONDS[interval] * SECONDS[interval]
+          for record in payload:
+              results = analyze(record.get("history", []), interval)
+              assert results["status"] == "READY", results
+              assert results["closedCandles"] >= 250, results["closedCandles"]
+              assert results["lastCloseTimeUTC"] == expected_close, (
+                  f"Stale {record['symbol']} {interval}: "
+                  f"received {results['lastCloseTimeUTC']}, expected {expected_close}"
+              )
+              active_ob = [z for z in results["orderBlocks"] if z["state"] != "invalidated"]
+              print(
+                  f"SUCCESS {record['symbol']} {interval}: "
+                  f"{results['closedCandles']} fully closed candles; "
+                  f"UTC last close {datetime.fromtimestamp(expected_close, timezone.utc).isoformat()}; "
+                  f"structure={len(results['structure'])}, "
+                  f"FVG={len(results['fvg'])}, OB={len(results['orderBlocks'])}, "
+                  f"active OB={len(active_ob)}, liquidity={len(results['liquidity'])}"
+              )
+          PY
+          done
+      - name: Validate existing market data endpoint remains available
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 2 --max-time 50 \
+            "https://btc-sol-futures-test.exchange-currency-1111.workers.dev/" \
+            -o /tmp/market_data_live.json
+          python3 - <<'PY'
+          import json
+          with open("/tmp/market_data_live.json", encoding="utf-8") as f:
+              data = json.load(f)
+          assert data.get("ok") is True
+          assert len(data.get("results", [])) == 6
+          assert all(r.get("status") == "READY" for r in data["results"])
+          print("SUCCESS original / endpoint: 6 READY groups")
+          PY
