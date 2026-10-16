@@ -1,0 +1,57 @@
+name: Publish BTC SOL Market Structure
+
+on:
+  workflow_run:
+    workflows:
+      - "Publish BTC SOL Market Data"
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/publish-market-structure.yml"
+
+concurrency:
+  group: btc-sol-market-structure-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  structure:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - name: Checkout current main branch
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Download closed candle history
+        shell: bash
+        run: |
+          set -euo pipefail
+          for interval in 1hour 4hour daily; do
+            curl --fail --location --silent --show-error \
+              --retry 2 --retry-delay 3 --max-time 60 \
+              "https://btc-sol-futures-test.exchange-currency-1111.workers.dev/history?interval=$interval" \
+              -o "history_$interval.json"
+          done
+      - name: Compute structure and verify data freshness
+        run: python3 build_market_structure.py
+      - name: Commit independent structure snapshot if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f history_1hour.json history_4hour.json history_daily.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market_structure_data.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update BTC SOL market structure data"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          else
+            echo "Market structure data unchanged; no commit"
+          fi
