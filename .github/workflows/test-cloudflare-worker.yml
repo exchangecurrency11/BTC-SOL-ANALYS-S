@@ -1,0 +1,25 @@
+name: Test Cloudflare Market History
+
+on:
+  push:
+    paths:
+      - "cloudflare/btc-sol-futures-test.js"
+      - "tests/test-cloudflare-worker.mjs"
+      - ".github/workflows/test-cloudflare-worker.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check Cloudflare Worker syntax
+        run: node --check --input-type=module < cloudflare/btc-sol-futures-test.js
+      - name: Test existing endpoint compatibility and closed history
+        run: node --experimental-default-type=module --test tests/test-cloudflare-worker.mjs
