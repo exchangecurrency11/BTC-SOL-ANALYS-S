@@ -1,0 +1,25 @@
+name: Test BTC SOL Market Structure
+
+on:
+  push:
+    paths:
+      - "market_structure.py"
+      - "tests/test_market_structure.py"
+      - ".github/workflows/test-market-structure.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Unit tests without market API calls
+        run: python -m unittest discover -s tests -p "test_*.py" -v
