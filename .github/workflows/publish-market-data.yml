@@ -28,33 +28,67 @@ jobs:
           curl --fail --location --silent --show-error \
             --retry 2 --max-time 90 \
             "https://btc-sol-futures-test.exchange-currency-1111.workers.dev/" \
-            -o market_data.json
+            -o market_data.pending.json
 
-      - name: Validate data
+      - name: Validate fresh closed candles and avoid duplicate commits
         run: |
           python3 - <<'PY'
           import json
+          import os
+          from datetime import datetime, timezone
 
-          with open("market_data.json") as f:
+          def parse_time(value):
+              return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+
+          now = datetime.now(timezone.utc)
+          with open("market_data.pending.json", encoding="utf-8") as f:
               data = json.load(f)
 
-          assert data.get("ok") is True
+          if data.get("ok") is not True:
+              raise ValueError("Market data provider returned ok=false")
+
+          checked = parse_time(data["checkedAtUTC"])
+          age = (now - checked).total_seconds()
+          if not -60 <= age <= 300:
+              raise ValueError(f"Provider response timestamp is not fresh: age={age:.0f}s")
+
           results = data.get("results", [])
+          symbols = ("BTCUSDT_PERP.A", "SOLUSDT_PERP.A")
+          intervals = ("1hour", "4hour", "daily")
+          expected_groups = {(symbol, interval) for symbol in symbols for interval in intervals}
+          actual_groups = {(r.get("symbol"), r.get("interval")) for r in results}
+          if len(results) != 6 or actual_groups != expected_groups:
+              raise ValueError("Missing, duplicate or unexpected BTC/SOL timeframe groups")
 
-          assert len(results) == 6
-          assert all(
-              r.get("status") == "READY"
-              for r in results
-          )
-
+          expected_closes = {
+              "1hour": now.replace(minute=0, second=0, microsecond=0),
+              "4hour": now.replace(hour=(now.hour // 4) * 4, minute=0, second=0, microsecond=0),
+              "daily": now.replace(hour=0, minute=0, second=0, microsecond=0),
+          }
           for r in results:
-              assert "closeTimeUTC" in r
-              assert "candle" in r
-              assert "indicators" in r
+              if r.get("status") != "READY" or not r.get("candle") or not r.get("indicators"):
+                  raise ValueError(f"Missing candle/indicators: {r.get('symbol')} {r.get('interval')}")
+              actual_close = parse_time(r["closeTimeUTC"])
+              expected_close = expected_closes[r["interval"]]
+              if actual_close != expected_close:
+                  raise ValueError(
+                      f"STALE CANDLE {r['symbol']} {r['interval']}: "
+                      f"got {actual_close.isoformat()}, expected {expected_close.isoformat()}"
+                  )
 
-          print("SUCCESS: 6 data groups verified")
+          previous = None
+          if os.path.isfile("market_data.json"):
+              with open("market_data.json", encoding="utf-8") as f:
+                  previous = json.load(f)
+          # checkedAtUTC alone changing should not create another GitHub commit.
+          content_key = lambda d: {k: v for k, v in d.items() if k != "checkedAtUTC"}
+          if previous is not None and content_key(previous) == content_key(data):
+              os.remove("market_data.pending.json")
+              print("SUCCESS: Fresh candles verified; data unchanged, no new commit needed")
+          else:
+              os.replace("market_data.pending.json", "market_data.json")
+              print("SUCCESS: Fresh BTC/SOL candles verified; updated data ready to commit")
           PY
-
       - name: Commit market data
         run: |
           git config user.name "github-actions[bot]"
