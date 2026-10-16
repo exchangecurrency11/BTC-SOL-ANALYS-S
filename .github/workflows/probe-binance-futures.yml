@@ -1,0 +1,21 @@
+name: Probe Binance Futures Read Only
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/probe-binance-futures.yml"
+      - "tests/probe_binance_futures.py"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Test public Binance USD-M futures endpoints without credentials
+        run: python3 tests/probe_binance_futures.py
