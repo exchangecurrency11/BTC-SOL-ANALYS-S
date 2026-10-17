@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T03:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T04:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -327,7 +327,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T03:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T04:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -588,8 +588,8 @@
           "volumeRatio": 3.362,
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "fresh",
-          "retests": 0,
+          "state": "retested",
+          "retests": 1,
           "invalidatedAt": null
         }
       ],
@@ -786,7 +786,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T04:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1148,13 +1148,6 @@
         },
         {
           "kind": "equal_lows",
-          "level": 76900.15,
-          "firstPivotAt": 1787932800,
-          "secondPivotAt": 1788120000,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
           "level": 76404.5,
           "firstPivotAt": 1789286400,
           "secondPivotAt": 1789344000,
@@ -1171,14 +1164,14 @@
       "counts": {
         "activeCandidateOB": 6,
         "openFVG": 4,
-        "structureEventsInLookback": 17
+        "structureEventsInLookback": 16
       }
     },
     {
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T04:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1536,7 +1529,7 @@
       "counts": {
         "activeCandidateOB": 4,
         "openFVG": 7,
-        "structureEventsInLookback": 18
+        "structureEventsInLookback": 16
       }
     },
     {
