@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -278,14 +278,6 @@
       "openFVG": [
         {
           "side": "bearish",
-          "formedAt": 1791302400,
-          "low": 85815.4,
-          "high": 85908.8,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
           "formedAt": 1791338400,
           "low": 84497.5,
           "high": 85357.2,
@@ -305,6 +297,14 @@
           "formedAt": 1792076400,
           "low": 80743.5,
           "high": 81720.3,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792263600,
+          "low": 81344.0,
+          "high": 81427.8,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -356,7 +356,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -738,6 +738,14 @@
           "high": 104.56,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792263600,
+          "low": 103.47,
+          "high": 103.7,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -800,7 +808,7 @@
       ],
       "counts": {
         "activeCandidateOB": 8,
-        "openFVG": 6,
+        "openFVG": 7,
         "structureEventsInLookback": 17
       }
     },
@@ -808,7 +816,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1193,7 +1201,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-17T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-17T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1495,6 +1503,14 @@
           "high": 105.71,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792252800,
+          "low": 104.17,
+          "high": 104.56,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -1536,7 +1552,7 @@
       ],
       "counts": {
         "activeCandidateOB": 4,
-        "openFVG": 7,
+        "openFVG": 8,
         "structureEventsInLookback": 16
       }
     },
