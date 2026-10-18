@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -202,8 +202,8 @@
           "volumeRatio": 6.505,
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "fresh",
-          "retests": 0,
+          "state": "retested",
+          "retests": 1,
           "invalidatedAt": null
         }
       ],
@@ -291,14 +291,6 @@
           "high": 81720.3,
           "state": "open",
           "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
-          "formedAt": 1792274400,
-          "low": 81426.7,
-          "high": 81545.4,
-          "state": "open",
-          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -331,6 +323,13 @@
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
+          "kind": "equal_highs",
+          "level": 81709.7,
+          "firstPivotAt": 1792220400,
+          "secondPivotAt": 1792270800,
+          "note": "Potential chart liquidity; not live order-book data"
+        },
+        {
           "kind": "equal_lows",
           "level": 82737.4,
           "firstPivotAt": 1791640800,
@@ -340,7 +339,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 3,
+        "openFVG": 2,
         "structureEventsInLookback": 20
       }
     },
@@ -348,7 +347,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
