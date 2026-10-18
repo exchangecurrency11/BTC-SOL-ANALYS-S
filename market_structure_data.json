@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T11:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T12:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -377,7 +377,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T11:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T12:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -802,13 +802,6 @@
           "firstPivotAt": 1791705600,
           "secondPivotAt": 1791727200,
           "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
-          "level": 103.545,
-          "firstPivotAt": 1791986400,
-          "secondPivotAt": 1792008000,
-          "note": "Potential chart liquidity; not live order-book data"
         }
       ],
       "counts": {
@@ -821,7 +814,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T12:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1148,13 +1141,6 @@
       "liquidity": [
         {
           "kind": "equal_highs",
-          "level": 79798.55,
-          "firstPivotAt": 1788940800,
-          "secondPivotAt": 1789128000,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_highs",
           "level": 85185.2,
           "firstPivotAt": 1790323200,
           "secondPivotAt": 1790510400,
@@ -1180,6 +1166,13 @@
           "firstPivotAt": 1789488000,
           "secondPivotAt": 1789574400,
           "note": "Potential chart liquidity; not live order-book data"
+        },
+        {
+          "kind": "equal_lows",
+          "level": 80765.5,
+          "firstPivotAt": 1792166400,
+          "secondPivotAt": 1792267200,
+          "note": "Potential chart liquidity; not live order-book data"
         }
       ],
       "counts": {
@@ -1192,7 +1185,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T12:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
