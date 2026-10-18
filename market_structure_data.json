@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T20:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T21:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -111,7 +111,7 @@
             "low": 85267.2,
             "high": 85585.0
           },
-          "volumeRatio": 2.409,
+          "volumeRatio": 2.46,
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "fresh",
@@ -158,8 +158,8 @@
           "volumeRatio": 2.325,
           "fvgConfluence": true,
           "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "fresh",
-          "retests": 0,
+          "state": "retested",
+          "retests": 1,
           "invalidatedAt": null
         },
         {
@@ -329,14 +329,6 @@
           "fullyFilledAt": null
         },
         {
-          "side": "bullish",
-          "formedAt": 1792076400,
-          "low": 80743.5,
-          "high": 81720.3,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
           "side": "bearish",
           "formedAt": 1792332000,
           "low": 81520.1,
@@ -349,6 +341,14 @@
           "formedAt": 1792335600,
           "low": 81208.9,
           "high": 81275.0,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792353600,
+          "low": 80968.4,
+          "high": 81037.8,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -407,7 +407,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T20:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T21:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -511,7 +511,7 @@
             "low": 120.61,
             "high": 121.17
           },
-          "volumeRatio": 1.573,
+          "volumeRatio": 1.561,
           "fvgConfluence": true,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "fresh",
@@ -803,6 +803,14 @@
           "high": 103.87,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792353600,
+          "low": 101.28,
+          "high": 101.96,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -858,7 +866,7 @@
       ],
       "counts": {
         "activeCandidateOB": 9,
-        "openFVG": 5,
+        "openFVG": 6,
         "structureEventsInLookback": 20
       }
     },
