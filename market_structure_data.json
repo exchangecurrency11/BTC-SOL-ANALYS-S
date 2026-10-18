@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T09:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -98,7 +98,7 @@
       "candidateOrderBlocks": [
         {
           "side": "bearish",
-          "event": "CHoCH",
+          "event": "BOS",
           "originAt": 1791327600,
           "confirmedAt": 1791338400,
           "breakAt": 1791334800,
@@ -347,7 +347,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-18T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-18T09:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
