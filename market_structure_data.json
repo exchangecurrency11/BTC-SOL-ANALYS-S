@@ -7,16 +7,9 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T01:00:00Z",
       "closedCandles": 300,
       "structure": [
-        {
-          "event": "BOS",
-          "direction": "bearish",
-          "at": 1792033200,
-          "brokenSwingAt": 1791997200,
-          "brokenLevel": 81452.2
-        },
         {
           "event": "BOS",
           "direction": "bearish",
@@ -93,6 +86,13 @@
           "at": 1792360800,
           "brokenSwingAt": 1792346400,
           "brokenLevel": 81244.1
+        },
+        {
+          "event": "CHoCH",
+          "direction": "bearish",
+          "at": 1792454400,
+          "brokenSwingAt": 1792425600,
+          "brokenLevel": 81701.0
         }
       ],
       "candidateOrderBlocks": [
@@ -181,7 +181,7 @@
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "retested",
-          "retests": 2,
+          "retests": 3,
           "invalidatedAt": null
         },
         {
@@ -355,7 +355,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -459,7 +459,7 @@
             "low": 115.9,
             "high": 116.69
           },
-          "volumeRatio": 2.743,
+          "volumeRatio": 3.036,
           "fvgConfluence": true,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "fresh",
@@ -707,13 +707,6 @@
           "level": 110.265,
           "firstPivotAt": 1791608400,
           "secondPivotAt": 1791622800,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_highs",
-          "level": 110.66,
-          "firstPivotAt": 1791640800,
-          "secondPivotAt": 1791658800,
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
