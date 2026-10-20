@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T02:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T03:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -291,14 +291,6 @@
           "high": 81176.8,
           "state": "open",
           "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
-          "formedAt": 1792458000,
-          "low": 81823.2,
-          "high": 81888.7,
-          "state": "open",
-          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -347,7 +339,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 3,
+        "openFVG": 2,
         "structureEventsInLookback": 20
       }
     },
@@ -355,7 +347,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T02:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T03:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -447,28 +439,6 @@
         {
           "side": "bearish",
           "event": "BOS",
-          "originAt": 1791424800,
-          "confirmedAt": 1791435600,
-          "breakAt": 1791432000,
-          "brokenLevel": 115.21,
-          "body": {
-            "low": 116.05,
-            "high": 116.43
-          },
-          "wick": {
-            "low": 115.9,
-            "high": 116.69
-          },
-          "volumeRatio": 3.497,
-          "fvgConfluence": true,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "fresh",
-          "retests": 0,
-          "invalidatedAt": null
-        },
-        {
-          "side": "bearish",
-          "event": "BOS",
           "originAt": 1791450000,
           "confirmedAt": 1791460800,
           "breakAt": 1791457200,
@@ -551,7 +521,7 @@
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "retested",
-          "retests": 5,
+          "retests": 6,
           "invalidatedAt": null
         },
         {
@@ -760,9 +730,9 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 6,
+        "activeCandidateOB": 5,
         "openFVG": 5,
-        "structureEventsInLookback": 19
+        "structureEventsInLookback": 18
       }
     },
     {
