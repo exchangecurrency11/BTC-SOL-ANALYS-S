@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T05:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T06:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -181,7 +181,7 @@
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "retested",
-          "retests": 3,
+          "retests": 4,
           "invalidatedAt": null
         },
         {
@@ -291,14 +291,6 @@
           "high": 81176.8,
           "state": "open",
           "fullyFilledAt": null
-        },
-        {
-          "side": "bullish",
-          "formedAt": 1792468800,
-          "low": 81950.2,
-          "high": 82016.0,
-          "state": "open",
-          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -347,7 +339,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 3,
+        "openFVG": 2,
         "structureEventsInLookback": 20
       }
     },
@@ -355,7 +347,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T05:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T06:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -459,7 +451,7 @@
             "low": 114.61,
             "high": 115.3
           },
-          "volumeRatio": 2.324,
+          "volumeRatio": 2.381,
           "fvgConfluence": true,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "fresh",
@@ -713,13 +705,6 @@
           "level": 109.19,
           "firstPivotAt": 1791705600,
           "secondPivotAt": 1791727200,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
-          "level": 103.53,
-          "firstPivotAt": 1792418400,
-          "secondPivotAt": 1792432800,
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
