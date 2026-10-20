@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T06:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T07:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -291,6 +291,14 @@
           "high": 81176.8,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792476000,
+          "low": 81847.9,
+          "high": 82016.0,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -339,7 +347,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 2,
+        "openFVG": 3,
         "structureEventsInLookback": 20
       }
     },
@@ -347,7 +355,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T06:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T07:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -451,7 +459,7 @@
             "low": 114.61,
             "high": 115.3
           },
-          "volumeRatio": 2.381,
+          "volumeRatio": 2.365,
           "fvgConfluence": true,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "fresh",
@@ -655,6 +663,14 @@
           "high": 103.33,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792476000,
+          "low": 104.88,
+          "high": 105.1,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -717,7 +733,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 5,
+        "openFVG": 6,
         "structureEventsInLookback": 18
       }
     },
