@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -361,7 +361,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -753,7 +753,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1068,14 +1068,6 @@
       "openFVG": [
         {
           "side": "bullish",
-          "formedAt": 1789704000,
-          "low": 76711.0,
-          "high": 77188.0,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bullish",
           "formedAt": 1789747200,
           "low": 78443.0,
           "high": 80532.3,
@@ -1087,6 +1079,14 @@
           "formedAt": 1791345600,
           "low": 84362.3,
           "high": 85267.2,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792512000,
+          "low": 81626.4,
+          "high": 82308.0,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -1159,7 +1159,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1483,6 +1483,14 @@
           "high": 103.73,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792512000,
+          "low": 104.45,
+          "high": 105.23,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -1524,7 +1532,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 7,
+        "openFVG": 8,
         "structureEventsInLookback": 15
       }
     },
