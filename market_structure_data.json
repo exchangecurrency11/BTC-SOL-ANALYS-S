@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T21:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T22:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -115,7 +115,7 @@
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "retested",
-          "retests": 3,
+          "retests": 4,
           "invalidatedAt": null
         },
         {
@@ -291,6 +291,14 @@
           "high": 82061.9,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792530000,
+          "low": 82629.1,
+          "high": 82770.8,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -353,7 +361,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 2,
+        "openFVG": 3,
         "structureEventsInLookback": 20
       }
     },
@@ -361,7 +369,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-20T21:00:00Z",
+      "lastCloseTimeUTC": "2026-10-20T22:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -610,14 +618,6 @@
       "openFVG": [
         {
           "side": "bearish",
-          "formedAt": 1791795600,
-          "low": 111.91,
-          "high": 112.5,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
           "formedAt": 1791806400,
           "low": 111.05,
           "high": 111.39,
@@ -653,6 +653,14 @@
           "formedAt": 1792504800,
           "low": 104.85,
           "high": 105.15,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792530000,
+          "low": 106.24,
+          "high": 106.46,
           "state": "open",
           "fullyFilledAt": null
         }
