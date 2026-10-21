@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T05:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -369,7 +369,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T05:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -660,6 +660,20 @@
       "liquidity": [
         {
           "kind": "equal_highs",
+          "level": 110.845,
+          "firstPivotAt": 1791493200,
+          "secondPivotAt": 1791511200,
+          "note": "Potential chart liquidity; not live order-book data"
+        },
+        {
+          "kind": "equal_highs",
+          "level": 110.85,
+          "firstPivotAt": 1791511200,
+          "secondPivotAt": 1791525600,
+          "note": "Potential chart liquidity; not live order-book data"
+        },
+        {
+          "kind": "equal_highs",
           "level": 110.265,
           "firstPivotAt": 1791608400,
           "secondPivotAt": 1791622800,
@@ -670,13 +684,6 @@
           "level": 110.66,
           "firstPivotAt": 1791640800,
           "secondPivotAt": 1791658800,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_highs",
-          "level": 108.9,
-          "firstPivotAt": 1791835200,
-          "secondPivotAt": 1791874800,
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
@@ -698,13 +705,6 @@
           "level": 105.215,
           "firstPivotAt": 1792206000,
           "secondPivotAt": 1792220400,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_highs",
-          "level": 105.575,
-          "firstPivotAt": 1792447200,
-          "secondPivotAt": 1792468800,
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
