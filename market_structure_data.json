@@ -7,16 +7,9 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T09:00:00Z",
       "closedCandles": 300,
       "structure": [
-        {
-          "event": "CHoCH",
-          "direction": "bullish",
-          "at": 1792076400,
-          "brokenSwingAt": 1792026000,
-          "brokenLevel": 81893.8
-        },
         {
           "event": "BOS",
           "direction": "bullish",
@@ -93,6 +86,13 @@
           "at": 1792504800,
           "brokenSwingAt": 1792468800,
           "brokenLevel": 82238.9
+        },
+        {
+          "event": "BOS",
+          "direction": "bullish",
+          "at": 1792569600,
+          "brokenSwingAt": 1792540800,
+          "brokenLevel": 83194.6
         }
       ],
       "candidateOrderBlocks": [
@@ -205,6 +205,28 @@
           "state": "fresh",
           "retests": 0,
           "invalidatedAt": null
+        },
+        {
+          "side": "bullish",
+          "event": "BOS",
+          "originAt": 1792558800,
+          "confirmedAt": 1792573200,
+          "breakAt": 1792569600,
+          "brokenLevel": 83194.6,
+          "body": {
+            "low": 82635.6,
+            "high": 82774.9
+          },
+          "wick": {
+            "low": 82594.8,
+            "high": 82929.1
+          },
+          "volumeRatio": 1.527,
+          "fvgConfluence": true,
+          "note": "Candidate OHLCV order block; not verified institutional orders",
+          "state": "fresh",
+          "retests": 0,
+          "invalidatedAt": null
         }
       ],
       "recentInvalidatedOrderBlocks": [
@@ -291,6 +313,14 @@
           "high": 82061.9,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792569600,
+          "low": 82881.9,
+          "high": 83065.0,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -352,8 +382,8 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 5,
-        "openFVG": 2,
+        "activeCandidateOB": 6,
+        "openFVG": 3,
         "structureEventsInLookback": 20
       }
     },
@@ -361,7 +391,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T09:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -610,14 +640,6 @@
       "openFVG": [
         {
           "side": "bearish",
-          "formedAt": 1791806400,
-          "low": 111.05,
-          "high": 111.39,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
           "formedAt": 1791817200,
           "low": 109.21,
           "high": 109.65,
@@ -645,6 +667,14 @@
           "formedAt": 1792504800,
           "low": 104.85,
           "high": 105.15,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792569600,
+          "low": 106.25,
+          "high": 106.44,
           "state": "open",
           "fullyFilledAt": null
         }
