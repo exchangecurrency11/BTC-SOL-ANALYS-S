@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -399,7 +399,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -595,7 +595,7 @@
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "retested",
-          "retests": 1,
+          "retests": 2,
           "invalidatedAt": null
         }
       ],
@@ -782,7 +782,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1052,14 +1052,6 @@
       ],
       "openFVG": [
         {
-          "side": "bullish",
-          "formedAt": 1789747200,
-          "low": 78443.0,
-          "high": 80532.3,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
           "side": "bearish",
           "formedAt": 1791345600,
           "low": 84362.3,
@@ -1072,6 +1064,14 @@
           "formedAt": 1792512000,
           "low": 81626.4,
           "high": 82308.0,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792598400,
+          "low": 83686.2,
+          "high": 84135.9,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -1144,7 +1144,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
