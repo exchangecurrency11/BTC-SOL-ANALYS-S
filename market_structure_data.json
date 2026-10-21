@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T03:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T04:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -369,7 +369,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T03:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T04:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -753,7 +753,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T04:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1159,7 +1159,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-21T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-21T04:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
