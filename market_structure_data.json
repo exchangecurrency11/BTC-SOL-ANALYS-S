@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-22T11:00:00Z",
+      "lastCloseTimeUTC": "2026-10-22T12:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -401,7 +401,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-22T11:00:00Z",
+      "lastCloseTimeUTC": "2026-10-22T12:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -679,6 +679,14 @@
           "high": 106.9,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1792666800,
+          "low": 104.27,
+          "high": 104.38,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -726,13 +734,6 @@
         },
         {
           "kind": "equal_lows",
-          "level": 103.53,
-          "firstPivotAt": 1792418400,
-          "secondPivotAt": 1792432800,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
           "level": 103.6,
           "firstPivotAt": 1792432800,
           "secondPivotAt": 1792458000,
@@ -748,7 +749,7 @@
       ],
       "counts": {
         "activeCandidateOB": 4,
-        "openFVG": 4,
+        "openFVG": 5,
         "structureEventsInLookback": 19
       }
     },
@@ -756,7 +757,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-22T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-22T12:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1034,18 +1035,18 @@
           "fullyFilledAt": null
         },
         {
-          "side": "bullish",
-          "formedAt": 1792512000,
-          "low": 81626.4,
-          "high": 82308.0,
+          "side": "bearish",
+          "formedAt": 1792641600,
+          "low": 82955.0,
+          "high": 84019.2,
           "state": "open",
           "fullyFilledAt": null
         },
         {
           "side": "bearish",
-          "formedAt": 1792641600,
-          "low": 82955.0,
-          "high": 84019.2,
+          "formedAt": 1792656000,
+          "low": 82227.6,
+          "high": 82624.1,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -1118,7 +1119,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-22T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-22T12:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
