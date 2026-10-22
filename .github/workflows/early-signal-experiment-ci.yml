@@ -1,0 +1,28 @@
+name: Early Signal Experiment CI
+
+on:
+  push:
+    branches:
+      - experiment/early-signals-v1-20261022
+    paths:
+      - "early_signal_experiment.py"
+      - "market_structure.py"
+      - "tests/test_early_signal_experiment.py"
+      - ".github/workflows/early-signal-experiment-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - name: Python version
+        run: python3 --version
+      - name: Unit tests (no internet or exchange credentials required)
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      - name: Compile-check
+        run: python3 -m py_compile early_signal_experiment.py market_structure.py
