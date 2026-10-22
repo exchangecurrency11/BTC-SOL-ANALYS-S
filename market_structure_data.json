@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-22T06:00:00Z",
+      "lastCloseTimeUTC": "2026-10-22T07:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -185,28 +185,6 @@
           "invalidatedAt": null
         },
         {
-          "side": "bullish",
-          "event": "BOS",
-          "originAt": 1792558800,
-          "confirmedAt": 1792573200,
-          "breakAt": 1792569600,
-          "brokenLevel": 83194.6,
-          "body": {
-            "low": 82635.6,
-            "high": 82774.9
-          },
-          "wick": {
-            "low": 82594.8,
-            "high": 82929.1
-          },
-          "volumeRatio": 1.527,
-          "fvgConfluence": true,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 1,
-          "invalidatedAt": null
-        },
-        {
           "side": "bearish",
           "event": "CHoCH",
           "originAt": 1792616400,
@@ -232,28 +210,6 @@
       "recentInvalidatedOrderBlocks": [
         {
           "side": "bearish",
-          "event": "CHoCH",
-          "originAt": 1792314000,
-          "confirmedAt": 1792332000,
-          "breakAt": 1792328400,
-          "brokenLevel": 81586.5,
-          "body": {
-            "low": 81705.8,
-            "high": 82122.6
-          },
-          "wick": {
-            "low": 81705.8,
-            "high": 82268.7
-          },
-          "volumeRatio": 3.085,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "invalidated",
-          "retests": 1,
-          "invalidatedAt": 1792368000
-        },
-        {
-          "side": "bearish",
           "event": "BOS",
           "originAt": 1792342800,
           "confirmedAt": 1792353600,
@@ -273,6 +229,28 @@
           "state": "invalidated",
           "retests": 1,
           "invalidatedAt": 1792360800
+        },
+        {
+          "side": "bullish",
+          "event": "BOS",
+          "originAt": 1792558800,
+          "confirmedAt": 1792573200,
+          "breakAt": 1792569600,
+          "brokenLevel": 83194.6,
+          "body": {
+            "low": 82635.6,
+            "high": 82774.9
+          },
+          "wick": {
+            "low": 82594.8,
+            "high": 82929.1
+          },
+          "volumeRatio": 1.527,
+          "fvgConfluence": true,
+          "note": "Candidate OHLCV order block; not verified institutional orders",
+          "state": "invalidated",
+          "retests": 1,
+          "invalidatedAt": 1792648800
         },
         {
           "side": "bullish",
@@ -406,7 +384,7 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 6,
+        "activeCandidateOB": 5,
         "openFVG": 6,
         "structureEventsInLookback": 20
       }
@@ -415,7 +393,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-22T06:00:00Z",
+      "lastCloseTimeUTC": "2026-10-22T07:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -588,8 +566,8 @@
           "volumeRatio": 8.322,
           "fvgConfluence": true,
           "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "fresh",
-          "retests": 0,
+          "state": "retested",
+          "retests": 1,
           "invalidatedAt": null
         },
         {
