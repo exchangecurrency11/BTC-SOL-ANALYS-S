@@ -52,7 +52,7 @@ def average_true_range(bars, end, count=14):
     return sum(vals) / len(vals)
 
 
-def _zone_status(zone, bars, start):
+def _zone_status(zone, bars, start, interval_seconds):
     touches = 0
     active_touch = False
     invalidated_at = None
@@ -67,7 +67,8 @@ def _zone_status(zone, bars, start):
             touches += 1
         active_touch = inside
     return {"state": "invalidated" if invalidated_at else ("retested" if touches else "fresh"),
-            "retests": touches, "invalidatedAt": invalidated_at}
+            "retests": touches, "invalidatedAt": invalidated_at,
+            "invalidationConfirmedAt": invalidated_at + interval_seconds if invalidated_at is not None else None}
 
 
 def analyze(history, interval, as_of=None, pivot_span=3):
@@ -93,10 +94,12 @@ def analyze(history, interval, as_of=None, pivot_span=3):
             left = bars[i - 2]
             if b["l"] > left["h"] and b["l"] - left["h"] >= .12 * atr:
                 zone = {"side": "bullish", "formedAt": b["t"],
+                        "confirmedAt": b["t"] + SECONDS[interval],
                         "low": left["h"], "high": b["l"]}
                 output["fvg"].append(zone)
             if b["h"] < left["l"] and left["l"] - b["h"] >= .12 * atr:
                 zone = {"side": "bearish", "formedAt": b["t"],
+                        "confirmedAt": b["t"] + SECONDS[interval],
                         "low": b["h"], "high": left["l"]}
                 output["fvg"].append(zone)
 
@@ -129,6 +132,7 @@ def analyze(history, interval, as_of=None, pivot_span=3):
             event = "CHoCH" if old_bias and old_bias != direction else "BOS"
             bias = direction
             structure = {"event": event, "direction": direction, "at": b["t"],
+                         "confirmedAt": b["t"] + SECONDS[interval],
                          "brokenSwingAt": p["t"], "brokenLevel": p["price"]}
             output["structure"].append(structure)
 
@@ -152,13 +156,14 @@ def analyze(history, interval, as_of=None, pivot_span=3):
                           if ob["t"] < gap["formedAt"] <= b["t"] and gap["side"] == direction]
             zone = {"side": direction, "event": event, "originAt": ob["t"],
                     "confirmedAt": b["t"] + SECONDS[interval], "breakAt": b["t"],
+                    "breakConfirmedAt": b["t"] + SECONDS[interval],
                     "brokenLevel": p["price"],
                     "body": {"low": min(ob["o"], ob["c"]), "high": max(ob["o"], ob["c"])},
                     "wick": {"low": ob["l"], "high": ob["h"]},
                     "volumeRatio": round(ratio, 3) if ratio is not None else None,
                     "fvgConfluence": bool(associated),
                     "note": "Candidate OHLCV order block; not verified institutional orders"}
-            zone.update(_zone_status(zone, bars, i + 1))
+            zone.update(_zone_status(zone, bars, i + 1, SECONDS[interval]))
             output["orderBlocks"].append(zone)
 
     # Equal highs/lows: potential resting liquidity, NOT real order-book orders.
@@ -172,12 +177,14 @@ def analyze(history, interval, as_of=None, pivot_span=3):
             if abs(a["price"] - b["price"]) <= tolerance:
                 output["liquidity"].append({"kind": label, "level": round((a["price"] + b["price"]) / 2, 8),
                                              "firstPivotAt": a["t"], "secondPivotAt": b["t"],
+                                             "knownAt": max(a["confirmedAt"], b["confirmedAt"]),
                                              "note": "Potential chart liquidity; not live order-book data"})
 
     # Full FVG fill is checked only after the gap has formed.
     for gap in output["fvg"]:
         gap["state"] = "open"
         gap["fullyFilledAt"] = None
+        gap["fullyFilledConfirmedAt"] = None
         for bar in bars:
             if bar["t"] <= gap["formedAt"]:
                 continue
@@ -185,6 +192,7 @@ def analyze(history, interval, as_of=None, pivot_span=3):
             if filled:
                 gap["state"] = "filled"
                 gap["fullyFilledAt"] = bar["t"]
+                gap["fullyFilledConfirmedAt"] = bar["t"] + SECONDS[interval]
                 break
     output["structure"] = output["structure"][-20:]
     output["orderBlocks"] = output["orderBlocks"][-24:]
