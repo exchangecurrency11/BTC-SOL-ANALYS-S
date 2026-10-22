@@ -1,0 +1,36 @@
+name: Early Signal Historical Replay (read-only)
+
+on:
+  push:
+    branches:
+      - experiment/early-signals-v1-20261022
+    paths:
+      - "replay_early_signals.py"
+      - ".github/workflows/early-signal-historical-replay.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  replay-closed-1h:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+      - name: Fetch 1H closed candle history (read only)
+        run: |
+          curl --fail --location --silent --show-error --retry 2 --max-time 60 \
+            "https://btc-sol-futures-test.exchange-currency-1111.workers.dev/history?interval=1hour" \
+            -o history_1hour.json
+      - name: Generate experimental events without future bars
+        run: |
+          python3 replay_early_signals.py --input history_1hour.json \
+            --output experimental_early_signal_report.json --lookback 168
+      - name: Keep report as a downloadable CI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: early-signal-1h-readonly-paper-test
+          path: experimental_early_signal_report.json
+          retention-days: 7
+      - name: Avoid publishing candle history or trading signals to main
+        run: echo "Test only; no commits or exchange orders."
