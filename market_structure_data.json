@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-23T12:00:00Z",
+      "lastCloseTimeUTC": "2026-10-23T13:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -372,7 +372,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-23T12:00:00Z",
+      "lastCloseTimeUTC": "2026-10-23T13:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
