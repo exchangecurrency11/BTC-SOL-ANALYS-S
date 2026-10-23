@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-23T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-23T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -323,6 +323,14 @@
           "high": 82426.0,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792782000,
+          "low": 81433.0,
+          "high": 81531.1,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -371,7 +379,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 6,
+        "openFVG": 7,
         "structureEventsInLookback": 20
       }
     },
@@ -379,7 +387,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-23T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-23T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -657,6 +665,14 @@
           "high": 106.9,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792782000,
+          "low": 104.16,
+          "high": 104.32,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -719,7 +735,7 @@
       ],
       "counts": {
         "activeCandidateOB": 4,
-        "openFVG": 4,
+        "openFVG": 5,
         "structureEventsInLookback": 17
       }
     },
@@ -727,7 +743,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-23T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-23T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1089,7 +1105,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-23T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-23T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
