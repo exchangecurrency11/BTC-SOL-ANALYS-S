@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-24T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-24T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -116,50 +116,6 @@
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "retested",
           "retests": 2,
-          "invalidatedAt": null
-        },
-        {
-          "side": "bullish",
-          "event": "CHoCH",
-          "originAt": 1792270800,
-          "confirmedAt": 1792292400,
-          "breakAt": 1792288800,
-          "brokenLevel": 81686.4,
-          "body": {
-            "low": 81099.5,
-            "high": 81612.6
-          },
-          "wick": {
-            "low": 80751.0,
-            "high": 81686.4
-          },
-          "volumeRatio": 1.516,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 7,
-          "invalidatedAt": null
-        },
-        {
-          "side": "bullish",
-          "event": "CHoCH",
-          "originAt": 1792350000,
-          "confirmedAt": 1792364400,
-          "breakAt": 1792360800,
-          "brokenLevel": 81244.1,
-          "body": {
-            "low": 80840.9,
-            "high": 81147.1
-          },
-          "wick": {
-            "low": 80752.9,
-            "high": 81159.9
-          },
-          "volumeRatio": 2.305,
-          "fvgConfluence": true,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 5,
           "invalidatedAt": null
         },
         {
@@ -386,7 +342,7 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 5,
+        "activeCandidateOB": 3,
         "openFVG": 8,
         "structureEventsInLookback": 20
       }
@@ -395,7 +351,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-24T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-24T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
