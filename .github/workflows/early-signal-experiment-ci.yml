@@ -6,8 +6,11 @@ on:
       - experiment/early-signals-v1-20261022
     paths:
       - "early_signal_experiment.py"
+      - "signal_decision_v2.py"
       - "market_structure.py"
       - "tests/test_early_signal_experiment.py"
+      - "tests/test_signal_decision_v2.py"
+      - "tests/fixtures/oct24_point_in_time_snapshots.json"
       - ".github/workflows/early-signal-experiment-ci.yml"
   workflow_dispatch:
 
@@ -25,4 +28,4 @@ jobs:
       - name: Unit tests (no internet or exchange credentials required)
         run: python3 -m unittest discover -s tests -p "test_*.py" -v
       - name: Compile-check
-        run: python3 -m py_compile early_signal_experiment.py market_structure.py
+        run: python3 -m py_compile early_signal_experiment.py signal_decision_v2.py market_structure.py
