@@ -290,8 +290,23 @@ def main():
     with open(args.output,"w",encoding="utf-8") as f:
         json.dump(result,f,ensure_ascii=False,indent=2);f.write("\n")
     for symbol,r in result["results"].items():
-        print(symbol, "status",r["status"],"alerts",r.get("alertsCount"),
+        print(symbol, "status",r["status"],"1Hbars",r.get("hourCandles"),
+              "4Hbars",r.get("fourHourCandles"),"DailyBars",r.get("dailyCandles"),
+              "alerts",r.get("alertsCount"),"expiredWatches",r.get("retestExpiredCount"),
               "closedTrades",r.get("hypotheticalClosedTrades"),
-              "meanNetR",r.get("netRAverageIllustrative"))
+              "meanNetR",r.get("netRAverageIllustrative"),
+              "unresolvedExcluded",r.get("unresolvedPositionExcluded"))
+        for event in r.get("alerts",[]):
+            when=datetime.fromtimestamp(event["knownUTC"],timezone.utc).isoformat()
+            print("  ALERT",when,event["side"],"level",event["BOSLevel"],
+                  "close",event["hourClose"],"RSI",round(event["RSI14"],2))
+        for trade in r.get("trades",[]):
+            known=datetime.fromtimestamp(trade["watchKnownUTC"],timezone.utc).isoformat()
+            opened=datetime.fromtimestamp(trade["entryOpenUTC"],timezone.utc).isoformat()
+            print("  PAPER TRADE",known,"entry",opened,trade["entry"],
+                  "stop",round(trade["stop"],4),"TPs",
+                  [round(n,4) for n in trade["targets"]],
+                  "exit",trade["exitReason"],"TPcount",trade["targetCount"],
+                  "assumedNetR",round(trade["netRIllustrative"],4))
 if __name__ == "__main__":
     main()
