@@ -7,6 +7,7 @@ on:
     paths:
       - "early_signal_experiment.py"
       - "signal_decision_v2.py"
+      - "audit_signal_v2.py"
       - "market_structure.py"
       - "tests/test_early_signal_experiment.py"
       - "tests/test_signal_decision_v2.py"
@@ -28,4 +29,12 @@ jobs:
       - name: Unit tests (no internet or exchange credentials required)
         run: python3 -m unittest discover -s tests -p "test_*.py" -v
       - name: Compile-check
-        run: python3 -m py_compile early_signal_experiment.py signal_decision_v2.py market_structure.py
+        run: python3 -m py_compile early_signal_experiment.py signal_decision_v2.py audit_signal_v2.py market_structure.py
+      - name: Reproduce actual Oct 24 closed-candle decision audit
+        run: python3 audit_signal_v2.py --output oct24_signal_v2_audit.json
+      - name: Upload reproducible evidence report
+        uses: actions/upload-artifact@v4
+        with:
+          name: oct24-btc-sol-three-stage-signal-audit
+          path: oct24_signal_v2_audit.json
+          retention-days: 14
