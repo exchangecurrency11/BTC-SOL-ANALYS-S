@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-24T03:00:00Z",
+      "lastCloseTimeUTC": "2026-10-24T04:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -351,7 +351,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-24T03:00:00Z",
+      "lastCloseTimeUTC": "2026-10-24T04:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -699,13 +699,6 @@
         },
         {
           "kind": "equal_lows",
-          "level": 103.545,
-          "firstPivotAt": 1791986400,
-          "secondPivotAt": 1792008000,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
           "level": 103.53,
           "firstPivotAt": 1792418400,
           "secondPivotAt": 1792432800,
@@ -743,7 +736,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-24T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-24T04:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1105,7 +1098,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-24T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-24T04:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1429,6 +1422,14 @@
           "high": 106.65,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792800000,
+          "low": 103.1,
+          "high": 103.47,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -1470,7 +1471,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 7,
+        "openFVG": 8,
         "structureEventsInLookback": 17
       }
     },
