@@ -1,0 +1,47 @@
+name: V3 Retest Backtest (paper only)
+
+on:
+  push:
+    branches:
+      - experiment/early-signals-v1-20261022
+    paths:
+      - backtest_retest_v3.py
+      - tests/test_backtest_retest_v3.py
+      - .github/workflows/early-signal-v3-backtest.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v5
+      - name: Unit tests first
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      - name: Retrieve only existing historical closed OHLCV (read-only)
+        run: |
+          set -euo pipefail
+          for interval in 1hour 4hour daily; do
+            curl --fail --location --silent --show-error \
+              --retry 2 --retry-delay 3 --max-time 60 \
+              "https://btc-sol-futures-test.exchange-currency-1111.workers.dev/history?interval=$interval" \
+              -o "history_$interval.json"
+          done
+      - name: Chronological retest / hypothetical next-candle-open backtest
+        run: |
+          python3 backtest_retest_v3.py \
+            --hour history_1hour.json \
+            --four history_4hour.json \
+            --daily history_daily.json \
+            --output v3_retest_backtest.json
+      - name: Publish read-only result as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: btc-sol-v3-paper-retest-backtest
+          path: v3_retest_backtest.json
+          retention-days: 14
+      - name: Declare boundaries
+        run: echo "Only paper replay; no trading, no Git pushes or production alerts."
