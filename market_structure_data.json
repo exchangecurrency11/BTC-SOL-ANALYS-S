@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-25T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -303,6 +303,14 @@
           "high": 80485.7,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1792954800,
+          "low": 80643.5,
+          "high": 80695.5,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -358,7 +366,7 @@
       ],
       "counts": {
         "activeCandidateOB": 3,
-        "openFVG": 9,
+        "openFVG": 10,
         "structureEventsInLookback": 20
       }
     },
@@ -366,7 +374,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-25T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -678,7 +686,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-25T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -996,7 +1004,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-25T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1284,24 +1292,9 @@
           "high": 103.47,
           "state": "open",
           "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
-          "formedAt": 1792915200,
-          "low": 101.6,
-          "high": 102.12,
-          "state": "open",
-          "fullyFilledAt": null
         }
       ],
       "liquidity": [
-        {
-          "kind": "equal_highs",
-          "level": 119.835,
-          "firstPivotAt": 1790020800,
-          "secondPivotAt": 1790136000,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
         {
           "kind": "equal_highs",
           "level": 122.125,
@@ -1333,7 +1326,7 @@
       ],
       "counts": {
         "activeCandidateOB": 3,
-        "openFVG": 9,
+        "openFVG": 8,
         "structureEventsInLookback": 17
       }
     },
