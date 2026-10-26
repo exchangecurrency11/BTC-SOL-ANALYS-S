@@ -7,16 +7,9 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-26T01:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T02:00:00Z",
       "closedCandles": 300,
       "structure": [
-        {
-          "event": "CHoCH",
-          "direction": "bearish",
-          "at": 1792328400,
-          "brokenSwingAt": 1792306800,
-          "brokenLevel": 81586.5
-        },
         {
           "event": "BOS",
           "direction": "bearish",
@@ -93,31 +86,16 @@
           "at": 1792882800,
           "brokenSwingAt": 1792864800,
           "brokenLevel": 80620.1
+        },
+        {
+          "event": "CHoCH",
+          "direction": "bearish",
+          "at": 1792976400,
+          "brokenSwingAt": 1792918800,
+          "brokenLevel": 80059.0
         }
       ],
       "candidateOrderBlocks": [
-        {
-          "side": "bullish",
-          "event": "CHoCH",
-          "originAt": 1792069200,
-          "confirmedAt": 1792080000,
-          "breakAt": 1792076400,
-          "brokenLevel": 81893.8,
-          "body": {
-            "low": 80164.5,
-            "high": 80515.3
-          },
-          "wick": {
-            "low": 79732.3,
-            "high": 80743.5
-          },
-          "volumeRatio": 2.325,
-          "fvgConfluence": true,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 4,
-          "invalidatedAt": null
-        },
         {
           "side": "bearish",
           "event": "CHoCH",
@@ -156,6 +134,28 @@
             "high": 81468.8
           },
           "volumeRatio": 1.926,
+          "fvgConfluence": false,
+          "note": "Candidate OHLCV order block; not verified institutional orders",
+          "state": "fresh",
+          "retests": 0,
+          "invalidatedAt": null
+        },
+        {
+          "side": "bearish",
+          "event": "CHoCH",
+          "originAt": 1792972800,
+          "confirmedAt": 1792980000,
+          "breakAt": 1792976400,
+          "brokenLevel": 80059.0,
+          "body": {
+            "low": 80114.3,
+            "high": 80138.4
+          },
+          "wick": {
+            "low": 79865.3,
+            "high": 80356.6
+          },
+          "volumeRatio": 3.116,
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "fresh",
@@ -358,7 +358,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-26T01:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T02:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
