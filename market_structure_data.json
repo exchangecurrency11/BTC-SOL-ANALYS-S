@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T23:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T00:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -300,13 +300,6 @@
       "liquidity": [
         {
           "kind": "equal_highs",
-          "level": 83885.55,
-          "firstPivotAt": 1791900000,
-          "secondPivotAt": 1791946800,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_highs",
           "level": 81765.25,
           "firstPivotAt": 1792188000,
           "secondPivotAt": 1792220400,
@@ -365,7 +358,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T23:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T00:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -677,7 +670,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T20:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T00:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -995,7 +988,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T20:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T00:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1325,7 +1318,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "daily",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T00:00:00Z",
       "closedCandles": 259,
       "structure": [
         {
@@ -1711,7 +1704,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "daily",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-25T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-26T00:00:00Z",
       "closedCandles": 259,
       "structure": [
         {
