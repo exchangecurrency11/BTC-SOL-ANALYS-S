@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -365,7 +365,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T19:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T20:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -684,7 +684,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -932,6 +932,14 @@
           "high": 82624.1,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793116800,
+          "low": 80132.2,
+          "high": 80413.3,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -1001,7 +1009,7 @@
       ],
       "counts": {
         "activeCandidateOB": 3,
-        "openFVG": 3,
+        "openFVG": 4,
         "structureEventsInLookback": 15
       }
     },
@@ -1009,7 +1017,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T20:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1324,13 +1332,6 @@
       "liquidity": [
         {
           "kind": "equal_highs",
-          "level": 122.125,
-          "firstPivotAt": 1791144000,
-          "secondPivotAt": 1791288000,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_highs",
           "level": 102.72,
           "firstPivotAt": 1792900800,
           "secondPivotAt": 1793016000,
@@ -1354,7 +1355,7 @@
       "counts": {
         "activeCandidateOB": 4,
         "openFVG": 8,
-        "structureEventsInLookback": 18
+        "structureEventsInLookback": 17
       }
     },
     {
