@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T17:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -365,16 +365,9 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T16:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T17:00:00Z",
       "closedCandles": 300,
       "structure": [
-        {
-          "event": "CHoCH",
-          "direction": "bullish",
-          "at": 1792371600,
-          "brokenSwingAt": 1792314000,
-          "brokenLevel": 104.32
-        },
         {
           "event": "BOS",
           "direction": "bullish",
@@ -451,6 +444,13 @@
           "at": 1793080800,
           "brokenSwingAt": 1793055600,
           "brokenLevel": 99.86
+        },
+        {
+          "event": "CHoCH",
+          "direction": "bullish",
+          "at": 1793116800,
+          "brokenSwingAt": 1793062800,
+          "brokenLevel": 101.01
         }
       ],
       "candidateOrderBlocks": [
@@ -677,7 +677,7 @@
       "counts": {
         "activeCandidateOB": 3,
         "openFVG": 4,
-        "structureEventsInLookback": 18
+        "structureEventsInLookback": 19
       }
     },
     {
