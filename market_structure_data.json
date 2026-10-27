@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T12:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T13:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -139,53 +139,9 @@
           "state": "fresh",
           "retests": 0,
           "invalidatedAt": null
-        },
-        {
-          "side": "bearish",
-          "event": "BOS",
-          "originAt": 1793077200,
-          "confirmedAt": 1793084400,
-          "breakAt": 1793080800,
-          "brokenLevel": 79684.8,
-          "body": {
-            "low": 79720.7,
-            "high": 79935.7
-          },
-          "wick": {
-            "low": 79689.2,
-            "high": 80017.8
-          },
-          "volumeRatio": 0.565,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 1,
-          "invalidatedAt": null
         }
       ],
       "recentInvalidatedOrderBlocks": [
-        {
-          "side": "bearish",
-          "event": "BOS",
-          "originAt": 1792843200,
-          "confirmedAt": 1792854000,
-          "breakAt": 1792850400,
-          "brokenLevel": 80404.6,
-          "body": {
-            "low": 80563.3,
-            "high": 80745.0
-          },
-          "wick": {
-            "low": 80502.8,
-            "high": 80813.7
-          },
-          "volumeRatio": 6.097,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "invalidated",
-          "retests": 2,
-          "invalidatedAt": 1792882800
-        },
         {
           "side": "bullish",
           "event": "CHoCH",
@@ -229,6 +185,28 @@
           "state": "invalidated",
           "retests": 2,
           "invalidatedAt": 1793005200
+        },
+        {
+          "side": "bearish",
+          "event": "BOS",
+          "originAt": 1793077200,
+          "confirmedAt": 1793084400,
+          "breakAt": 1793080800,
+          "brokenLevel": 79684.8,
+          "body": {
+            "low": 79720.7,
+            "high": 79935.7
+          },
+          "wick": {
+            "low": 79689.2,
+            "high": 80017.8
+          },
+          "volumeRatio": 0.565,
+          "fvgConfluence": false,
+          "note": "Candidate OHLCV order block; not verified institutional orders",
+          "state": "invalidated",
+          "retests": 1,
+          "invalidatedAt": 1793102400
         }
       ],
       "openFVG": [
@@ -349,7 +327,7 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 3,
+        "activeCandidateOB": 2,
         "openFVG": 8,
         "structureEventsInLookback": 20
       }
@@ -358,7 +336,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T12:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T13:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -510,55 +488,11 @@
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "retested",
-          "retests": 1,
-          "invalidatedAt": null
-        },
-        {
-          "side": "bearish",
-          "event": "BOS",
-          "originAt": 1793077200,
-          "confirmedAt": 1793084400,
-          "breakAt": 1793080800,
-          "brokenLevel": 99.86,
-          "body": {
-            "low": 100.09,
-            "high": 100.14
-          },
-          "wick": {
-            "low": 99.63,
-            "high": 100.33
-          },
-          "volumeRatio": 0.878,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 1,
+          "retests": 2,
           "invalidatedAt": null
         }
       ],
       "recentInvalidatedOrderBlocks": [
-        {
-          "side": "bearish",
-          "event": "BOS",
-          "originAt": 1792843200,
-          "confirmedAt": 1792854000,
-          "breakAt": 1792850400,
-          "brokenLevel": 101.05,
-          "body": {
-            "low": 101.46,
-            "high": 101.55
-          },
-          "wick": {
-            "low": 101.27,
-            "high": 101.7
-          },
-          "volumeRatio": 6.159,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "invalidated",
-          "retests": 1,
-          "invalidatedAt": 1792882800
-        },
         {
           "side": "bearish",
           "event": "BOS",
@@ -602,6 +536,28 @@
           "state": "invalidated",
           "retests": 1,
           "invalidatedAt": 1793037600
+        },
+        {
+          "side": "bearish",
+          "event": "BOS",
+          "originAt": 1793077200,
+          "confirmedAt": 1793084400,
+          "breakAt": 1793080800,
+          "brokenLevel": 99.86,
+          "body": {
+            "low": 100.09,
+            "high": 100.14
+          },
+          "wick": {
+            "low": 99.63,
+            "high": 100.33
+          },
+          "volumeRatio": 0.878,
+          "fvgConfluence": false,
+          "note": "Candidate OHLCV order block; not verified institutional orders",
+          "state": "invalidated",
+          "retests": 1,
+          "invalidatedAt": 1793102400
         }
       ],
       "openFVG": [
@@ -634,14 +590,6 @@
           "formedAt": 1792796400,
           "low": 102.93,
           "high": 103.47,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
-          "formedAt": 1793066400,
-          "low": 100.69,
-          "high": 100.79,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -698,8 +646,8 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 4,
-        "openFVG": 5,
+        "activeCandidateOB": 3,
+        "openFVG": 4,
         "structureEventsInLookback": 18
       }
     },
