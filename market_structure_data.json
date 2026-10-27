@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T07:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T08:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -158,8 +158,8 @@
           "volumeRatio": 0.565,
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "fresh",
-          "retests": 0,
+          "state": "retested",
+          "retests": 1,
           "invalidatedAt": null
         }
       ],
@@ -358,7 +358,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T07:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T08:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -531,8 +531,8 @@
           "volumeRatio": 0.878,
           "fvgConfluence": false,
           "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "fresh",
-          "retests": 0,
+          "state": "retested",
+          "retests": 1,
           "invalidatedAt": null
         }
       ],
@@ -707,7 +707,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T08:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1013,13 +1013,6 @@
           "firstPivotAt": 1792267200,
           "secondPivotAt": 1792353600,
           "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
-          "level": 79250.2,
-          "firstPivotAt": 1792843200,
-          "secondPivotAt": 1792972800,
-          "note": "Potential chart liquidity; not live order-book data"
         }
       ],
       "counts": {
@@ -1032,7 +1025,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-27T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-27T08:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
