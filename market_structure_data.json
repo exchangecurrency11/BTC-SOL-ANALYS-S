@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T11:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T12:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -372,7 +372,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T11:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T12:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -677,7 +677,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T12:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1013,13 +1013,6 @@
           "firstPivotAt": 1792267200,
           "secondPivotAt": 1792353600,
           "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
-          "level": 79250.2,
-          "firstPivotAt": 1792843200,
-          "secondPivotAt": 1792972800,
-          "note": "Potential chart liquidity; not live order-book data"
         }
       ],
       "counts": {
@@ -1032,7 +1025,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T08:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T12:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1312,14 +1305,6 @@
           "high": 106.65,
           "state": "open",
           "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
-          "formedAt": 1792800000,
-          "low": 103.1,
-          "high": 103.47,
-          "state": "open",
-          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -1347,7 +1332,7 @@
       ],
       "counts": {
         "activeCandidateOB": 3,
-        "openFVG": 8,
+        "openFVG": 7,
         "structureEventsInLookback": 16
       }
     },
