@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T07:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T08:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -372,7 +372,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T07:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T08:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -677,7 +677,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T08:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1020,13 +1020,6 @@
           "firstPivotAt": 1792843200,
           "secondPivotAt": 1792972800,
           "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
-          "level": 79395.05,
-          "firstPivotAt": 1792972800,
-          "secondPivotAt": 1793088000,
-          "note": "Potential chart liquidity; not live order-book data"
         }
       ],
       "counts": {
@@ -1039,7 +1032,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T08:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1193,53 +1186,9 @@
           "state": "fresh",
           "retests": 0,
           "invalidatedAt": null
-        },
-        {
-          "side": "bearish",
-          "event": "BOS",
-          "originAt": 1792944000,
-          "confirmedAt": 1792987200,
-          "breakAt": 1792972800,
-          "brokenLevel": 100.29,
-          "body": {
-            "low": 101.59,
-            "high": 101.76
-          },
-          "wick": {
-            "low": 101.22,
-            "high": 102.24
-          },
-          "volumeRatio": 1.618,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 2,
-          "invalidatedAt": null
         }
       ],
       "recentInvalidatedOrderBlocks": [
-        {
-          "side": "bearish",
-          "event": "BOS",
-          "originAt": 1792310400,
-          "confirmedAt": 1792353600,
-          "breakAt": 1792339200,
-          "brokenLevel": 101.16,
-          "body": {
-            "low": 103.26,
-            "high": 103.95
-          },
-          "wick": {
-            "low": 102.92,
-            "high": 104.32
-          },
-          "volumeRatio": 0.973,
-          "fvgConfluence": true,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "invalidated",
-          "retests": 1,
-          "invalidatedAt": 1792368000
-        },
         {
           "side": "bullish",
           "event": "CHoCH",
@@ -1283,6 +1232,28 @@
           "state": "invalidated",
           "retests": 1,
           "invalidatedAt": 1792627200
+        },
+        {
+          "side": "bearish",
+          "event": "BOS",
+          "originAt": 1792944000,
+          "confirmedAt": 1792987200,
+          "breakAt": 1792972800,
+          "brokenLevel": 100.29,
+          "body": {
+            "low": 101.59,
+            "high": 101.76
+          },
+          "wick": {
+            "low": 101.22,
+            "high": 102.24
+          },
+          "volumeRatio": 1.618,
+          "fvgConfluence": false,
+          "note": "Candidate OHLCV order block; not verified institutional orders",
+          "state": "invalidated",
+          "retests": 2,
+          "invalidatedAt": 1793160000
         }
       ],
       "openFVG": [
@@ -1375,7 +1346,7 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 4,
+        "activeCandidateOB": 3,
         "openFVG": 8,
         "structureEventsInLookback": 16
       }
