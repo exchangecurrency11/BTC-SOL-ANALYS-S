@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T09:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T10:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -116,28 +116,6 @@
           "note": "Candidate OHLCV order block; not verified institutional orders",
           "state": "fresh",
           "retests": 0,
-          "invalidatedAt": null
-        },
-        {
-          "side": "bearish",
-          "event": "CHoCH",
-          "originAt": 1792785600,
-          "confirmedAt": 1792796400,
-          "breakAt": 1792792800,
-          "brokenLevel": 81051.4,
-          "body": {
-            "low": 81255.1,
-            "high": 81369.7
-          },
-          "wick": {
-            "low": 81230.8,
-            "high": 81468.8
-          },
-          "volumeRatio": 1.926,
-          "fvgConfluence": false,
-          "note": "Candidate OHLCV order block; not verified institutional orders",
-          "state": "retested",
-          "retests": 2,
           "invalidatedAt": null
         },
         {
@@ -309,6 +287,14 @@
           "high": 81050.0,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793178000,
+          "low": 81050.2,
+          "high": 81311.5,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -377,8 +363,8 @@
         }
       ],
       "counts": {
-        "activeCandidateOB": 4,
-        "openFVG": 7,
+        "activeCandidateOB": 3,
+        "openFVG": 8,
         "structureEventsInLookback": 20
       }
     },
@@ -386,7 +372,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T09:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T10:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -620,6 +606,14 @@
           "high": 101.46,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793178000,
+          "low": 102.31,
+          "high": 102.44,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -675,7 +669,7 @@
       ],
       "counts": {
         "activeCandidateOB": 2,
-        "openFVG": 4,
+        "openFVG": 5,
         "structureEventsInLookback": 20
       }
     },
