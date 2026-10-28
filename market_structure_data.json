@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T06:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T07:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -334,6 +334,13 @@
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
+          "kind": "equal_highs",
+          "level": 81235.25,
+          "firstPivotAt": 1793134800,
+          "secondPivotAt": 1793156400,
+          "note": "Potential chart liquidity; not live order-book data"
+        },
+        {
           "kind": "equal_lows",
           "level": 81280.75,
           "firstPivotAt": 1792486800,
@@ -365,7 +372,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-28T06:00:00Z",
+      "lastCloseTimeUTC": "2026-10-28T07:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
