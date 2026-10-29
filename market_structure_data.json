@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-29T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-29T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -341,7 +341,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-29T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-29T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -567,14 +567,6 @@
           "high": 104.32,
           "state": "open",
           "fullyFilledAt": null
-        },
-        {
-          "side": "bullish",
-          "formedAt": 1793214000,
-          "low": 101.82,
-          "high": 101.92,
-          "state": "open",
-          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -637,7 +629,7 @@
       ],
       "counts": {
         "activeCandidateOB": 2,
-        "openFVG": 4,
+        "openFVG": 3,
         "structureEventsInLookback": 20
       }
     },
