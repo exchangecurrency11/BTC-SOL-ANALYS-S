@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-30T05:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -212,14 +212,6 @@
       "openFVG": [
         {
           "side": "bearish",
-          "formedAt": 1792623600,
-          "low": 84464.1,
-          "high": 84605.3,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
           "formedAt": 1792627200,
           "low": 84311.3,
           "high": 84400.0,
@@ -281,21 +273,29 @@
           "high": 78600.1,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793332800,
+          "low": 77535.2,
+          "high": 77889.9,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
         {
           "kind": "equal_highs",
-          "level": 82022.0,
-          "firstPivotAt": 1792724400,
-          "secondPivotAt": 1792760400,
+          "level": 82239.35,
+          "firstPivotAt": 1792447200,
+          "secondPivotAt": 1792468800,
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
           "kind": "equal_highs",
-          "level": 80718.95,
-          "firstPivotAt": 1792846800,
-          "secondPivotAt": 1792864800,
+          "level": 82022.0,
+          "firstPivotAt": 1792724400,
+          "secondPivotAt": 1792760400,
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
@@ -342,13 +342,6 @@
         },
         {
           "kind": "equal_lows",
-          "level": 80988.1,
-          "firstPivotAt": 1792684800,
-          "secondPivotAt": 1792713600,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
-        {
-          "kind": "equal_lows",
           "level": 80433.1,
           "firstPivotAt": 1792796400,
           "secondPivotAt": 1792832400,
@@ -379,7 +372,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T04:00:00Z",
+      "lastCloseTimeUTC": "2026-10-30T05:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -703,6 +696,14 @@
           "high": 95.32,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793332800,
+          "low": 95.5,
+          "high": 96.72,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -793,7 +794,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 7,
+        "openFVG": 8,
         "structureEventsInLookback": 20
       }
     },
