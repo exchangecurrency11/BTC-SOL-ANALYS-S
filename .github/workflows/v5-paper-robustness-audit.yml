@@ -1,0 +1,44 @@
+name: V5 Paper Signal Robustness Audit
+
+on:
+  push:
+    branches:
+      - experiment/early-signals-v1-20261022
+    paths:
+      - audit_paper_robustness_v5.py
+      - tests/test_audit_paper_robustness_v5.py
+      - .github/workflows/v5-paper-robustness-audit.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit-two-year-results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+      - name: Unit and regression tests
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      - name: Retrieve verified V4 two-year paper-test artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 41114906506 --repo "${{ github.repository }}" \
+            --name binance-usdm-24-month-paper-test --dir downloaded
+          test -n "$(find downloaded -name long_v4_result.json -print -quit)"
+      - name: Analyze historical risk sensitivity without fitting any rules
+        run: |
+          SOURCE="$(find downloaded -name long_v4_result.json -print -quit)"
+          python3 audit_paper_robustness_v5.py --input "$SOURCE" \
+            --output paper_robustness_v5.json
+      - name: Publish findings
+        uses: actions/upload-artifact@v4
+        with:
+          name: btc-sol-2yr-robustness-v5
+          path: paper_robustness_v5.json
+          retention-days: 21
+      - name: Production safety reminder
+        run: echo "Only independent paper audit; nothing sent to exchange or ChatGPT alerts."
