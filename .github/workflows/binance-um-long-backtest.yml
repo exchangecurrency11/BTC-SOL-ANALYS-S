@@ -1,0 +1,89 @@
+name: Binance USD-M 24 Month Historical Paper Test
+
+on:
+  push:
+    branches:
+      - experiment/early-signals-v1-20261022
+    paths:
+      - download_binance_um_history.py
+      - backtest_retest_long_v4.py
+      - tests/test_download_binance_um_history.py
+      - tests/test_backtest_retest_long_v4.py
+      - .github/workflows/binance-um-long-backtest.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run offline unit and regression tests
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
+      - name: Check official Binance monthly archive and SHA256
+        run: |
+          python3 download_binance_um_history.py \
+            --start 2026-09 --end 2026-09 --workers 2 \
+            --output-dir smoke_data
+          python3 - <<'PY'
+          import json
+          p=json.load(open("smoke_data/source_manifest.json"))
+          assert p["checksumsVerified"] == 2
+          for symbol in ("BTCUSDT","SOLUSDT"):
+              assert p["pairCounts"][symbol]["1hour"] == 720
+              assert p["pairCounts"][symbol]["4hour"] == 180
+              assert p["pairCounts"][symbol]["daily"] == 30
+          print("SMOKE OK",p["pairCounts"])
+          PY
+      - name: Publish small source audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: binance-archive-monthly-smoke
+          path: smoke_data/source_manifest.json
+          retention-days: 14
+
+  two-years-paper-test:
+    needs: verify-archive
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - name: Verify complete 2024-10 through 2026-09 USDT-M history
+        run: |
+          python3 download_binance_um_history.py \
+            --start 2024-10 --end 2026-09 \
+            --workers 4 --output-dir binance_2y
+      - name: Run time-correct retrospective entry and 1R/2R/3R stop model
+        run: |
+          python3 backtest_retest_long_v4.py \
+            --hour binance_2y/history_1hour.json \
+            --four binance_2y/history_4hour.json \
+            --daily binance_2y/history_daily.json \
+            --as-of 1790812800 \
+            --split-utc 2026-04-01T00:00:00+00:00 \
+            --output binance_2y/long_v4_result.json
+          python3 - <<'PY'
+          import json
+          p=json.load(open("binance_2y/long_v4_result.json"))
+          assert set(p["results"])=={"BTCUSDT_PERP.A","SOLUSDT_PERP.A"}
+          for sym,r in p["results"].items():
+              assert r["hourCandles"]>=17000, (sym,r["hourCandles"])
+              assert r["dailyCandles"]>=700, (sym,r["dailyCandles"])
+              print(sym,"IN SAMPLE",p["segments"][sym]["training"],
+                    "HOLDOUT",p["segments"][sym]["holdout"])
+          PY
+      - name: Publish reproducible report and source checksum manifest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: binance-usdm-24-month-paper-test
+          path: |
+            binance_2y/long_v4_result.json
+            binance_2y/source_manifest.json
+          if-no-files-found: warn
+          retention-days: 21
+      - name: Ensure no production changes
+        run: echo "Read-only archive, paper replay only; no exchange orders, secrets, or main branch changes."
