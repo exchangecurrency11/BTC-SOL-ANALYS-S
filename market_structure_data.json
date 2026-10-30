@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T09:00:00Z",
+      "lastCloseTimeUTC": "2026-10-30T10:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -259,14 +259,6 @@
           "fullyFilledAt": null
         },
         {
-          "side": "bullish",
-          "formedAt": 1793332800,
-          "low": 77535.2,
-          "high": 77889.9,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
           "side": "bearish",
           "formedAt": 1793347200,
           "low": 78200.0,
@@ -356,7 +348,7 @@
       ],
       "counts": {
         "activeCandidateOB": 2,
-        "openFVG": 8,
+        "openFVG": 7,
         "structureEventsInLookback": 20
       }
     },
@@ -364,7 +356,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T09:00:00Z",
+      "lastCloseTimeUTC": "2026-10-30T10:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -679,9 +671,9 @@
       "liquidity": [
         {
           "kind": "equal_highs",
-          "level": 102.915,
-          "firstPivotAt": 1792810800,
-          "secondPivotAt": 1792900800,
+          "level": 105.045,
+          "firstPivotAt": 1792742400,
+          "secondPivotAt": 1792764000,
           "note": "Potential chart liquidity; not live order-book data"
         },
         {
