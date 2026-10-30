@@ -180,7 +180,7 @@ def main():
     data,counts,start,end=build(result,args.start,args.end)
     out=Path(args.output_dir);out.mkdir(parents=True,exist_ok=True)
     for tf in PERIODS:
-        packed=[{"symbol":s+"USDT_PERP.A","history":data[(s,tf)]} for s in SYMBOLS]
+        packed=[{"symbol":s+"_PERP.A","history":data[(s,tf)]} for s in SYMBOLS]
         (out/f"history_{tf}.json").write_text(json.dumps(packed,separators=(",",":"))+"\n")
     summary={
         "source":"Binance official data.binance.vision FUTURES/UM monthly 1h klines",
