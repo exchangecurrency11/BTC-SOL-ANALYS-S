@@ -46,25 +46,25 @@ jobs:
       - name: SHA256-verify and append only UTC-complete October 1-29 daily 1H klines
         run: |
           python3 extend_binance_archive_october_v6.py \
-            --base-dir binance_2y --first-day 2026-10-01 --last-day 2026-10-29 \
-            --workers 4 --output-dir binance_oct29
+            --base-dir binance_2y --first-day 2026-10-01 --last-day 2026-10-27 \
+            --workers 4 --output-dir binance_oct27
           python3 - <<'PY'
           import json
-          manifest=json.load(open("binance_oct29/extended_manifest.json"))
-          assert manifest["additionalDailyZipFilesVerified"]==58
-          assert manifest["endExclusiveUTC"]=="2026-10-30T00:00:00+00:00"
+          manifest=json.load(open("binance_oct27/extended_manifest.json"))
+          assert manifest["additionalDailyZipFilesVerified"]==54
+          assert manifest["endExclusiveUTC"]=="2026-10-28T00:00:00+00:00"
           for sym in ("BTCUSDT","SOLUSDT"):
-              assert manifest["counts"][sym]=={"1hour":18216,"4hour":4554,"daily":759}
+              assert manifest["counts"][sym]=={"1hour":18168,"4hour":4542,"daily":757}
           print("OCTOBER ARCHIVE CONTIGUOUS",manifest["counts"])
           PY
       - name: Rerun unchanged V4 paper-entry rules with October closed candles
         run: |
           python3 backtest_retest_long_v4.py \
-            --hour binance_oct29/history_1hour.json \
-            --four binance_oct29/history_4hour.json \
-            --daily binance_oct29/history_daily.json \
-            --as-of 1793318400 --split-utc 2026-04-01T00:00:00+00:00 \
-            --output binance_oct29/october_extended_paper.json
+            --hour binance_oct27/history_1hour.json \
+            --four binance_oct27/history_4hour.json \
+            --daily binance_oct27/history_daily.json \
+            --as-of 1793145600 --split-utc 2026-04-01T00:00:00+00:00 \
+            --output binance_oct27/october_extended_paper.json
       - name: Verify original 24-month historical signals unchanged
         env:
           GH_TOKEN: ${{ github.token }}
@@ -74,7 +74,7 @@ jobs:
           python3 - <<'PY'
           import json
           older=json.load(open("baseline/long_v4_result.json"))
-          newer=json.load(open("binance_oct29/october_extended_paper.json"))
+          newer=json.load(open("binance_oct27/october_extended_paper.json"))
           september_end=1790812800
           for sym in ("BTCUSDT_PERP.A","SOLUSDT_PERP.A"):
               old=older["results"][sym]
@@ -90,17 +90,17 @@ jobs:
       - name: Classify false-entry outcomes, RSI extremes, volume and retest lag
         run: |
           python3 analyze_failure_patterns_v6.py \
-            --input binance_oct29/october_extended_paper.json \
-            --output binance_oct29/failure_forensics_v6.json
+            --input binance_oct27/october_extended_paper.json \
+            --output binance_oct27/failure_forensics_v6.json
       - name: Publish results and verified source chain
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: btc-sol-oct29-forensics-v6
+          name: btc-sol-oct27-forensics-v6
           path: |
-            binance_oct29/extended_manifest.json
-            binance_oct29/october_extended_paper.json
-            binance_oct29/failure_forensics_v6.json
+            binance_oct27/extended_manifest.json
+            binance_oct27/october_extended_paper.json
+            binance_oct27/failure_forensics_v6.json
           if-no-files-found: warn
           retention-days: 21
       - name: Safety boundary
