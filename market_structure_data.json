@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-30T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -273,6 +273,14 @@
           "high": 80735.0,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1793318400,
+          "low": 78242.4,
+          "high": 78600.1,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -356,7 +364,7 @@
       ],
       "counts": {
         "activeCandidateOB": 2,
-        "openFVG": 8,
+        "openFVG": 9,
         "structureEventsInLookback": 20
       }
     },
@@ -364,7 +372,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-30T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -658,16 +666,17 @@
           "high": 99.76,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1793318400,
+          "low": 95.75,
+          "high": 96.45,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
-        {
-          "kind": "equal_highs",
-          "level": 107.185,
-          "firstPivotAt": 1792533600,
-          "secondPivotAt": 1792569600,
-          "note": "Potential chart liquidity; not live order-book data"
-        },
         {
           "kind": "equal_highs",
           "level": 104.84,
@@ -719,6 +728,13 @@
         },
         {
           "kind": "equal_lows",
+          "level": 105.395,
+          "firstPivotAt": 1792522800,
+          "secondPivotAt": 1792558800,
+          "note": "Potential chart liquidity; not live order-book data"
+        },
+        {
+          "kind": "equal_lows",
           "level": 102.98,
           "firstPivotAt": 1792684800,
           "secondPivotAt": 1792699200,
@@ -748,7 +764,7 @@
       ],
       "counts": {
         "activeCandidateOB": 4,
-        "openFVG": 6,
+        "openFVG": 7,
         "structureEventsInLookback": 20
       }
     },
