@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -212,14 +212,6 @@
       "openFVG": [
         {
           "side": "bearish",
-          "formedAt": 1792634400,
-          "low": 83446.0,
-          "high": 84042.9,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
           "formedAt": 1792638000,
           "low": 82970.0,
           "high": 83342.0,
@@ -263,6 +255,14 @@
           "formedAt": 1793347200,
           "low": 78200.0,
           "high": 78377.9,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793404800,
+          "low": 76973.8,
+          "high": 77220.3,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -335,7 +335,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T01:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -615,14 +615,6 @@
           "fullyFilledAt": null
         },
         {
-          "side": "bearish",
-          "formedAt": 1793368800,
-          "low": 95.32,
-          "high": 96.39,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
           "side": "bullish",
           "formedAt": 1793397600,
           "low": 95.2,
@@ -635,6 +627,14 @@
           "formedAt": 1793401200,
           "low": 95.61,
           "high": 95.75,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793404800,
+          "low": 95.94,
+          "high": 96.17,
           "state": "open",
           "fullyFilledAt": null
         }
