@@ -7,7 +7,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T23:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -335,7 +335,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "1hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T23:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
       "closedCandles": 300,
       "structure": [
         {
@@ -584,14 +584,6 @@
       "openFVG": [
         {
           "side": "bearish",
-          "formedAt": 1792634400,
-          "low": 106.21,
-          "high": 106.9,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
           "formedAt": 1792782000,
           "low": 104.16,
           "high": 104.32,
@@ -635,6 +627,14 @@
           "formedAt": 1793397600,
           "low": 95.2,
           "high": 95.34,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bullish",
+          "formedAt": 1793401200,
+          "low": 95.61,
+          "high": 95.75,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -714,7 +714,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T20:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1090,7 +1090,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "4hour",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T20:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
       "closedCandles": 299,
       "structure": [
         {
@@ -1400,14 +1400,6 @@
           "high": 99.76,
           "state": "open",
           "fullyFilledAt": null
-        },
-        {
-          "side": "bearish",
-          "formedAt": 1793376000,
-          "low": 95.36,
-          "high": 96.27,
-          "state": "open",
-          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -1498,7 +1490,7 @@
       ],
       "counts": {
         "activeCandidateOB": 4,
-        "openFVG": 9,
+        "openFVG": 8,
         "structureEventsInLookback": 18
       }
     },
@@ -1506,7 +1498,7 @@
       "symbol": "BTCUSDT_PERP.A",
       "interval": "daily",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
       "closedCandles": 259,
       "structure": [
         {
@@ -1808,14 +1800,6 @@
           "fullyFilledAt": null
         },
         {
-          "side": "bullish",
-          "formedAt": 1789776000,
-          "low": 77149.8,
-          "high": 80802.6,
-          "state": "open",
-          "fullyFilledAt": null
-        },
-        {
           "side": "bearish",
           "formedAt": 1791417600,
           "low": 83487.1,
@@ -1828,6 +1812,14 @@
           "formedAt": 1792713600,
           "low": 82035.3,
           "high": 82594.8,
+          "state": "open",
+          "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1793318400,
+          "low": 78776.5,
+          "high": 80355.4,
           "state": "open",
           "fullyFilledAt": null
         }
@@ -1907,7 +1899,7 @@
       "symbol": "SOLUSDT_PERP.A",
       "interval": "daily",
       "status": "READY",
-      "lastCloseTimeUTC": "2026-10-30T00:00:00Z",
+      "lastCloseTimeUTC": "2026-10-31T00:00:00Z",
       "closedCandles": 259,
       "structure": [
         {
@@ -2207,6 +2199,14 @@
           "high": 115.21,
           "state": "open",
           "fullyFilledAt": null
+        },
+        {
+          "side": "bearish",
+          "formedAt": 1793318400,
+          "low": 98.54,
+          "high": 100.4,
+          "state": "open",
+          "fullyFilledAt": null
         }
       ],
       "liquidity": [
@@ -2248,7 +2248,7 @@
       ],
       "counts": {
         "activeCandidateOB": 5,
-        "openFVG": 4,
+        "openFVG": 5,
         "structureEventsInLookback": 17
       }
     }
